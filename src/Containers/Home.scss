@@ -1,0 +1,33 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#000;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo{
+    width: 100%;
+    margin-top: 100px;
+}
+.btncustom{
+    width: 100%;
+    text-align: center;
+    background-color: #fded63;
+    color: #c2ae00;
+    font-weight: bold;
+    border: #c2ae00 3px solid;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 24px;
+    margin-top: 50px;
+
+}
+.btncustom:hover, .btncustom:focus{
+    background-color: #c2ae00;
+    color: #fded63;
+    border: #fded63 3px solid;
+}
+.fastar{
+    font-size: 35px !important;
+}
