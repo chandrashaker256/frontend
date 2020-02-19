@@ -21,6 +21,7 @@ class QuestionBox extends Component {
                     answer1: response.data.longest_opening_crawl_movie,
                     answer2: response.data.max_occurence_names,
                     answer3: response.data.spieces_count_results,
+                    answer4: response.data.planets_count_results,
                 })
             }
             console.log('Response', response);
@@ -57,14 +58,14 @@ class QuestionBox extends Component {
                 <div className="col-md-12">
                     <div className={`${classes.questionbox}`}>
                         <p className={`${classes.question}`}>What planet in StarWars universe provided largest number of vehicle pilots?</p>
-                        {this.state.answer4.map(function (answer, idx) { return (<h2 key={idx} className={`${classes.answer}`}>{answer.spieces_name}({answer.count})</h2>) })}
+                        {this.state.answer4.map(function (answer, idx) { return (<h2 key={idx} className={`${classes.answer}`}>Planet: {answer.planet_name} - Pilots: ({answer.count}) - {answer.vehicle}, {answer.people}</h2>) })}
                     </div>
                 </div>
             </div>
             <br />
         </div>);
         let loadingProgress = (
-            <span className={`${classes.spinnericon}`}><i class="fa fa-spinner fa-pulse"></i> Loading...</span>
+            <span className={`${classes.spinnericon}`}><i className="fa fa-spinner fa-pulse"></i> Loading...</span>
         )
         return (
             this.state.loaded ? loadingData : loadingProgress
