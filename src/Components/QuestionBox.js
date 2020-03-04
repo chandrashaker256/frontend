@@ -14,7 +14,7 @@ class QuestionBox extends Component {
     }
 
     componentDidMount = () => {
-        axios.post('http://127.0.0.1:8000/api/getAnswers').then(response => {
+        axios.post('http://18.139.226.173/backend/api/getAnswers').then(response => {
             if (response.status === 200) {
                 this.setState({
                     loaded: true,
